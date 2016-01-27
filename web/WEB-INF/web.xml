@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>Register</servlet-name>
+        <servlet-class>pl.javastart.servlets.Register</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+
+        <servlet-name>Register</servlet-name>
+
+        <url-pattern>/Register</url-pattern>
+
+    </servlet-mapping>
+
+
+    <servlet>
+
+        <servlet-name>Login</servlet-name>
+
+        <servlet-class>pl.javastart.servlets.Login</servlet-class>
+
+    </servlet>
+
+
+    <servlet-mapping>
+
+        <servlet-name>Login</servlet-name>
+
+        <url-pattern>/Login</url-pattern>
+
+    </servlet-mapping>
+
+
+    <servlet>
+
+        <servlet-name>Profile</servlet-name>
+
+        <servlet-class>pl.javastart.servlets.Profile</servlet-class>
+
+    </servlet>
+
+
+    <servlet-mapping>
+
+        <servlet-name>Profile</servlet-name>
+
+        <url-pattern>/Profile</url-pattern>
+
+    </servlet-mapping>
+
+
+
+
+    <servlet>
+
+        <servlet-name>AddAddress</servlet-name>
+
+        <servlet-class>pl.javastart.servlets.AddAddress</servlet-class>
+
+    </servlet>
+
+
+    <servlet-mapping>
+
+        <servlet-name>AddAddress</servlet-name>
+
+        <url-pattern>/AddAddress</url-pattern>
+
+    </servlet-mapping>
+
+
+    <servlet>
+
+        <servlet-name>EditAddress</servlet-name>
+
+        <servlet-class>pl.javastart.servlets.EditAddress</servlet-class>
+
+    </servlet>
+
+
+    <servlet-mapping>
+
+        <servlet-name>EditAddress</servlet-name>
+
+        <url-pattern>/EditAddress</url-pattern>
+
+    </servlet-mapping>
+
+
+    <servlet>
+
+        <servlet-name>DeleteAddress</servlet-name>
+
+        <servlet-class>pl.javastart.servlets.DeleteAddress</servlet-class>
+
+    </servlet>
+
+
+    <servlet-mapping>
+
+        <servlet-name>DeleteAddress</servlet-name>
+
+        <url-pattern>/DeleteAddress</url-pattern>
+
+    </servlet-mapping>
+
+
+    <filter>
+
+        <filter-name>LoginFilter</filter-name>
+
+        <filter-class>pl.javastart.filter.LoginFilter</filter-class>
+
+    </filter>
+    <filter>
+
+        <filter-name>ProfileFilter</filter-name>
+
+        <filter-class>pl.javastart.filter.ProfileFilter</filter-class>
+
+    </filter>
+
+    <filter-mapping>
+
+        <filter-name>ProfileFilter</filter-name>
+
+        <url-pattern>/Profile.jsp</url-pattern>
+
+    </filter-mapping>
+    <filter-mapping>
+
+        <filter-name>LoginFilter</filter-name>
+
+        <url-pattern>/Login.jsp</url-pattern>
+
+    </filter-mapping>
+
+
+    <filter>
+
+        <filter-name>changePrivilagesFilter</filter-name>
+
+        <filter-class>pl.javastart.filter.changePrivilagesFilter</filter-class>
+
+    </filter>
+
+
+
+    <filter-mapping>
+        <filter-name>changePrivilagesFilter</filter-name>
+        <url-pattern>/changePrivilages.jsp</url-pattern>
+    </filter-mapping>
+
+
+    <filter>
+
+        <filter-name>RegisterFilter</filter-name>
+
+        <filter-class>pl.javastart.filter.RegisterFilter</filter-class>
+
+    </filter>
+
+
+    <filter-mapping>
+
+        <filter-name>RegisterFilter</filter-name>
+
+        <url-pattern>/Register.jsp</url-pattern>
+
+    </filter-mapping>
+
+
+    <filter>
+
+        <filter-name>PremiumFilter</filter-name>
+
+        <filter-class>pl.javastart.filter.PremiumFilter</filter-class>
+
+    </filter>
+
+
+    <filter-mapping>
+
+        <filter-name>PremiumFilter</filter-name>
+
+        <url-pattern>/Premium.jsp</url-pattern>
+
+    </filter-mapping>
+
+
+</web-app>
